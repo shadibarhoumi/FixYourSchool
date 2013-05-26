@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  school: 
+  description: MyText
+  goal: 1
+  title: MyString
+
+two:
+  school: 
+  description: MyText
+  goal: 1
+  title: MyString

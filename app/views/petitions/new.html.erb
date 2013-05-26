@@ -1,0 +1,8 @@
+<h1>Create a new Petition!</h1>
+<%= form_for([@school, @petition]) do |f| %>
+	<%= f.text_field :title, placeholder: "Title of your petition" %><br>
+	<%= f.text_field :goal, placeholder: "How many signatures do you want?" %><br>
+	<%= f.text_area :description, placeholder: "What are you petitioning for?" %><br>
+
+	<%= f.submit %>
+<% end %>

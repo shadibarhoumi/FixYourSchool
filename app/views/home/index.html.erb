@@ -1,0 +1,8 @@
+<h1>Fix Your School</h1>
+
+<%= form_tag({controller: "schools", action: "search"}, method: "get") do %>
+	<%= label_tag(:query, "Search school:") %>
+	<%= text_field_tag(:query) %><br>
+	<%= submit_tag("Search") %>
+
+<% end %>

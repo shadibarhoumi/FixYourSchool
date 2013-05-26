@@ -1,0 +1,10 @@
+<h3>Search results for "<%= params[:query] %>"</h3>
+
+<% @results.each do |school| %>
+	<ul>
+		<li><%= link_to school.name, school %></li>
+	</ul>
+<% end %>
+
+<h4>Can't find your school?</h4>
+<%= link_to "Add your school to FixYourSchool", new_school_path %>

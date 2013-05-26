@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  petition: 
+  reason: MyText
+
+two:
+  user: 
+  petition: 
+  reason: MyText

@@ -1,0 +1,19 @@
+<h1>New School</h1>
+
+<%= form_for @school do |school_form| %>
+	<%= school_form.label :name %>
+	<%= school_form.text_field :name %><br>
+	
+	<%= school_form.fields_for :address, Address.new do |address_form| %>
+		<%= address_form.label :city %>
+		<%= address_form.text_field :city %><br>
+
+		<%= address_form.label :state %>
+		<%= address_form.text_field :state %><br>
+
+		<%= address_form.label :zipcode %>
+		<%= address_form.text_field :zipcode %><br>
+	<% end %>
+
+	<%= school_form.submit "Create School" %>
+<% end %>

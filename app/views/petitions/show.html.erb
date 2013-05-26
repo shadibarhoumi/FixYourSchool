@@ -1,0 +1,28 @@
+<h1><%= link_to @petition.school.name, @petition.school %> > <%= @petition.title %></h1>
+<p>Started by <%= @petition.user.name %></p>
+
+<div id="signature-form">
+	<%= form_for([@petition.school, @petition]) do |petition_form| %>
+		<%= petition_form.fields_for :signatures, @petition.signatures.build do |sig_form| %>
+			<%= sig_form.text_field :first_name, placeholder: "First Name" %><br>
+			<%= sig_form.text_field :last_name, placeholder: "Last Name" %><br>
+			<%= sig_form.text_field :email, placeholder: "Email" %><br>
+			<%= sig_form.text_area :reason, placeholder: "Why are you signing this?" %><br>
+			<%= sig_form.check_box :attends_school %>
+			<%= sig_form.label :attends_school, "I attend #{@petition.school.name}" %><br>
+		<% end %>
+		<%= petition_form.submit "Sign" %>
+	<% end %>
+</div>
+
+<div id="description">
+	<h2>Description:</h2>
+	<p><%= @petition.description %></p>
+</div>
+
+<div id="signatures">
+	<% @petition.signatures.each do |sig| %>
+		<p><%= sig.name %></p>
+		<p><%= sig.reason %></p>
+	<% end %>
+</div>

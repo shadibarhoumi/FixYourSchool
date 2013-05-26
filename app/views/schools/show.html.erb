@@ -1,0 +1,12 @@
+<h1><%= @school.name %></h1>
+<h2><%= @school.address.city %>, <%= @school.address.state %></h2>
+
+<%= link_to "Start a petition", new_school_petition_path(@school) %>
+
+<h2>Petitions</h2>
+
+<ul>
+	<% @school.petitions.each do |petition| %>
+	<li><%= link_to petition.title, school_petition_path(@school, petition) %>, started by <%= petition.user.name %></li>
+	<% end %>
+</ul>
