@@ -1,0 +1,24 @@
+<div id="header">
+
+<div id="login-controls">
+	<% if current_user %>
+		Logged in as <%= current_user.name %>.
+		<%# pass "current" into session_path because it wants an id %>
+		<%= link_to "Log Out", logout_path, method: "delete" %>
+	<% else %>
+		<%= link_to "Sign Up", signup_path %> or
+		<%= link_to "Log In", login_path %>
+	<% end %>
+</div>
+
+<h1>Fix My School</h1>
+<br>
+<%= form_tag({controller: "schools", action: "search"}, method: "get", :class => "form-search") do %>
+	<h2>Search</h2>
+	<div class="input-append">
+		<%= text_field_tag(:query, nil, :class => "search-query", placeholder: "Search School") %>
+		<%= submit_tag("Search", :class => "btn") %>
+	</div>
+<% end %>
+
+</div>

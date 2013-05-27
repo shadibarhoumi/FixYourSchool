@@ -1,4 +1,6 @@
-<h3>Search results for "<%= params[:query] %>"</h3>
+<div id="content">
+
+<h3>Your search "<%= params[:query] %>" returned <%= @results.length %> results:</h3>
 
 <% @results.each do |school| %>
 	<ul>
@@ -8,3 +10,5 @@
 
 <h4>Can't find your school?</h4>
 <%= link_to "Add your school to FixYourSchool", new_school_path %>
+
+</div>

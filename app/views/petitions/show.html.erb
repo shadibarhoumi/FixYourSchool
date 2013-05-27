@@ -14,7 +14,7 @@
 		<%= petition_form.submit "Sign" %>
 	<% end %>
 </div>
-
+<div id="petition">
 <div id="description">
 	<h2>Description:</h2>
 	<p><%= @petition.description %></p>
@@ -22,7 +22,9 @@
 
 <div id="signatures">
 	<% @petition.signatures.each do |sig| %>
+		<hr>
 		<p><%= sig.name %></p>
 		<p><%= sig.reason %></p>
 	<% end %>
+</div>
 </div>

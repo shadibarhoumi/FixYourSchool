@@ -1,3 +1,48 @@
 // Place all the styles related to the petitions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#petition {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#signature-form {
+    width: 35%;
+    float: right;
+    background-color: #384654;
+    position: relative;
+
+    min-height: 20px;
+    padding: 15px;
+    padding-right: 30px;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+} #signature-form > div.sidebar-head {
+	color: #A3A0A1;
+}
+input#sidebar-name, input#sidebar-email {
+	width: 100%;
+	height: 20px;
+	margin: 5px 0px;
+}
+textarea#sidebar-reason {
+	width: 100%;
+	height: 80px;
+	margin: 5px 0px;
+}
+#signature-form > button {
+	margin-left: auto;
+	margin-right: auto;
+}
+

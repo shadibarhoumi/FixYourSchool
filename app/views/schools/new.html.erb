@@ -1,6 +1,7 @@
 <h1>New School</h1>
 
 <%= form_for @school do |school_form| %>
+	<%= school_form.error_messages %>
 	<%= school_form.label :name %>
 	<%= school_form.text_field :name %><br>
 	
