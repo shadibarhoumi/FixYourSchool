@@ -11,15 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130526104536) do
+ActiveRecord::Schema.define(:version => 20130528010307) do
 
   create_table "addresses", :force => true do |t|
     t.string   "city"
     t.text     "state"
     t.integer  "zipcode"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "school_id"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
   end
 
   create_table "petitions", :force => true do |t|
@@ -63,11 +65,12 @@ ActiveRecord::Schema.define(:version => 20130526104536) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
     t.string   "email"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
 end

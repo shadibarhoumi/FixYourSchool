@@ -2,7 +2,7 @@
 
 <%= form_for @school do |school_form| %>
 	<%= school_form.error_messages %>
-	<%= school_form.label :name %>
+	<%= school_form.label :name, "School Name" %>
 	<%= school_form.text_field :name %><br>
 	
 	<%= school_form.fields_for :address, Address.new do |address_form| %>

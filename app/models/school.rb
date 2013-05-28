@@ -1,7 +1,7 @@
 class School < ActiveRecord::Base
   attr_accessible :name, :address_attributes, :petitions_attributes
   has_many :users
-  has_one :address
+  has_one :address, as: :addressable
   has_many :petitions
 
   accepts_nested_attributes_for :address
