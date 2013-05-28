@@ -1,4 +1,2 @@
 add cookie to track if user has signed petition
-add address to user
-find out how to do a has_one with between schools and addresses; and users and addresses; (probably a one-to-many rel
 add description to targets
