@@ -1,14 +1,5 @@
 <%= form_for @user do |user_form| %>
-	<% if @user.errors.any? %>
-		<div class="error_messages">
-			<h2>We were unable to sign you up, please correct the errors below.</h2>
-			<ul>
-				<% @user.errors.full_messages.each do |message| %>
-					<li><%= message %></li>
-				<% end %>
-			</ul>
-		</div>
-	<% end %>
+	<%= user_form.error_messages %>
 
 	<div class="field">
 		<%= user_form.label :first_name, "First Name" %><br>
