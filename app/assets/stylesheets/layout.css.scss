@@ -1,0 +1,155 @@
+@import url('http://fonts.googleapis.com/css?family=Lato|Roboto+Slab:700|Lobster');
+
+// color scheme
+$dom-color: #148FCC;
+$acc-color-dark: #005580;
+$error-color: #d4270a;
+$success-color: #078d15;
+
+// mixins
+@mixin serif-font {
+	font-family: 'Roboto Slab', serif;
+}
+
+@mixin sans-font {
+	font-family: 'Lato', sans-serif;
+}
+
+// begin styles
+body {
+	@include sans-font;
+}
+
+a {
+	color: $dom-color;
+
+	&:hover {
+		text-decoration: none;
+		color: $acc-color-dark;
+	}
+}
+
+#login-controls {
+	position: absolute;
+	font-size: 12px;
+	top: 5px;
+	right: 10px;
+	float: right;
+}
+
+.wrap {
+	margin-right: auto;
+	margin-left: auto;
+	width: 65%;
+}
+
+.top-nav {
+	margin-top: 20px;
+	text-transform: uppercase; 
+	font-weight: normal;
+    font-size: 13px;
+    color: gray;
+
+	& > * {
+		padding: 20px 0px;
+		color: gray;
+	}
+
+	#home {
+		font-family: 'Lobster', serif;
+		font-size: 30px;
+		margin-top: -5px;
+		font-weight: normal;
+		text-transform: none;
+		color: $acc-color-dark;
+		transition: color .2s ease;
+
+		&:hover {
+			color: $dom-color;
+			transition: color .2s ease;
+		}
+
+
+	}
+
+	.nav-link {
+		margin-left: 20px;
+		margin-top: 10px;
+		padding: 10px 20px;
+		color: gray;
+		transition:color .25s ease;
+
+		&:hover {
+			background-color: $dom-color;
+			color: #FFF;
+			transition:color .25s ease;
+
+		}
+	}
+
+	#search-form {
+		$button-color: #148FCC;
+
+		margin-right: 40px;
+
+		#query {
+			width: 75px;
+			border-radius: 0px;
+			height: 18px;
+			padding: 0px;
+			border-width: 1px;
+			@include sans-font;
+			font-weight: normal;
+			font-size: 12px;
+			border-color: $button-color;
+			transition: 0.3s ease;
+
+			&:focus {
+				width: 165px;
+				transition: 0.3s ease;
+			}
+		}
+
+		button:before {
+		    border-color: transparent $button-color;
+		    border-style: solid solid solid none;
+		    border-width: 6px 6px 6px 0;
+		    content: "";
+		    left: -5.5px;
+		    position: absolute;
+		    top: 4.5px;
+		}
+		
+		button {
+		    background: none repeat scroll 0 0 $button-color;
+		    border: 0 none;
+		    border-radius: 0px;
+		    color: #FFFFFF;
+		    cursor: pointer;
+		    float: right;
+		    height: 20px;
+		    overflow: visible;
+		    padding: 0;
+		    position: relative;
+		    top: 1.5px;
+		    width: 25px;
+		}
+
+		i {
+			margin-right: 1px;
+    		margin-top: 3px;
+		}
+	}
+
+	#login-controls {
+		padding: 20spx;
+	}
+
+	.nav-element-left {
+		float: left;
+	}
+
+	.nav-element-right {
+		float: right;
+	}
+}
