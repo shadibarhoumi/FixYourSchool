@@ -1,16 +1,12 @@
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+// sprockets compiles each css file individually within its own scope
+// so the variables defined in one file aren't available in others
+// use sass to import files so that mixins and variables are preserved
 
 @import "bootstrap";
+@import "bourbon";
+@import "layout";
+@import "home";
+@import "petitions";
+@import "schools";
+@import "sessions";
+@import "users";

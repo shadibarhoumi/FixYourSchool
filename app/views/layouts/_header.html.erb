@@ -6,8 +6,8 @@
 
 
 	<%= form_tag({controller: "schools", action: "search"}, method: "get", class: "nav-element-right", id: "search-form") do %>
-			<%= text_field_tag(:query, nil, :class => "search-query", placeholder: "Find School") %>
-			<button type="submit" name="commit"><i class="icon-search icon-white"></i></button>
+			<%= text_field_tag(:query, nil, :id => "query", placeholder: "Find School") %>
+			<button id="submit" type="submit" name="commit"><i class="icon-search icon-white"></i></button>
 			<%# submit_tag "Search", id: "submit", class: "icon-search" %>
 	<% end %>
 
